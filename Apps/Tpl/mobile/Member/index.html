@@ -1,0 +1,50 @@
+<include file="Member:header" />
+
+<!-- 内容 START -->
+  <div class="center-content mt20">
+    <div class="wrap w1000">
+      <include file="Member:left" />
+      <div class="right-content fRight">
+        <h2>个人中心</h2>
+        <div class="mainbody mt10">
+          <table border="0" cellspacing="6" cellpadding="3">
+      <tbody>
+        <tr>
+          <th>头像：</th>
+          <td><img src="<empty name='data.thumb'>../Public/images/nopic.gif<else />__ROOT__/Uploads{$data.thumb}</empty>" width="80" height="80" /></td>
+        </tr>
+        <tr>
+          <th>用户名：</th>
+          <td>{$data.account}</td>
+        </tr>
+        <tr>
+          <th>昵称：</th>
+          <td>{$data.nickname}</td>
+        </tr>
+        <tr>
+          <th>会员组：</th>
+           <td>{$data.role_id|getGroupName}</td>
+        </tr>
+        <tr>
+          <th>帐户余额：</th>
+           <td><span class="intergral"><empty name="data.amount">0<else /> {$data.amount}</empty></span>元</td>
+        </tr>
+        <tr>
+          <th>积分点数：</th>
+          <td><span class="intergral"><empty name="data.intergral">0<else /> {$data.intergral}</empty></span>点</td>
+        </tr>
+        <tr>
+          <th>电子邮箱：</th>
+           <td>{$data.email}</td>
+        </tr>
+      </tbody>
+    </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 内容 END -->
+
+
+
+<include file="Member:footer" />

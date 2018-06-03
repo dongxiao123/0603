@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'badword', 2 => 'level', 3 => 'replaceword', 4 => 'create_time', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'smallint(5) unsigned', 'badword' => 'char(20)', 'level' => 'tinyint(5)', 'replaceword' => 'char(20)', 'create_time' => 'int(10) unsigned', ), );?>

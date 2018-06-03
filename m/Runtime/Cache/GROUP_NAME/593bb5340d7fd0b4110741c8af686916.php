@@ -1,0 +1,35 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no, email=no"><link type="text/css" rel="stylesheet"
+	href="../mobile_file/css/style.css"><script src="../mobile_file/img/v.htm" charset="utf-8"></script><script>window.jQuery || document.write('<script src="template/wap/../mobile_file/js/jquery-2.0.3.min.js"><\/script>')</script><script src="../mobile_file/js/jquery-2.js"></script><script type="text/javascript" src="../mobile_file/js/hammer.js"></script><script type="text/javascript" src="../mobile_file/js/common.js"></script><script src="../mobile_file/js/jquery.js" type="text/javascript"></script><script>
+          $(document).ready(function(){
+			  $(".tab").each(function(i) {
+				  $(this).click(function(){
+					  $(".tab").removeClass("cur");
+					  $(this).addClass("cur");
+					  $("#cont .pubcon").hide();
+					  $("#cont .pubcon").eq(i).show();
+					  });
+            });
+	})
+    </script><title>已发布的微信群</title><meta name="keywords" content="已发布的微信群"><meta name="description" content="已发布的微信群"></head><body><header class="fixed-top head"><div class="fixed"><div class="headlf fl"><a href="index.php"><img src="../mobile_file/img/logo.png"></a></div><div class="headrg fr"><a href="index.php?m=Index&a=search"><img src="../mobile_file/img/search.png"></a><a class="headpub" href="javascript:;"><img src="../mobile_file/img/fenl.png"></a></div></div><div style="-moz-user-select: none;" class="menu-fn menu hide-me" id="more-fn">
+          ﻿<table class="menu_nav" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><a class="menu_box" href="index.php?m=Index&a=weixinqun&id=44"><img
+                src="../mobile_file/img/wxq.png">微信群</a></td><td><a class="menu_box" href="index.php?m=Index&a=weixinqun&id=47"><img
+                src="../mobile_file/img/gzh.png">公众号</a></td><td><a class="menu_box" href="index.php?m=Index&a=weixinqun&id=48"><img
+                src="../mobile_file/img/grwx.png">个人微信</a></td></tr><tr><td><a class="menu_box" href="index.php?m=Index&a=huoyuan"><img
+                src="../mobile_file/img/huoy.png">微商货源</a></td><!-- <td><a class="menu_box" href="index.php?m=Index&a=weixinqun"><img
+            src="../mobile_file/img/jiam.png">互动接龙</a></td><td><a class="menu_box" href="index.php?m=Index&a=weixinqun"><img
+            src="../mobile_file/img/yinx.png">QQ圈</a></td> --><td><a class="menu_box" href="index.php?m=Index&a=weixin_add"><img
+                src="../mobile_file/img/fabu.png">二维码发布</a></td><td><a class="menu_box" href="index.php?&m=user&a=user_login"><img
+                src="../mobile_file/img/denglu.png">登录/注册</a></td></tr></tbody></table></div></header><div class="wrap-page"><div class="myself"><div class="myhead fl"><img src="../mobile_file/img/avatar.jpg"></div><div class="myinfo fl"><ul><li><a href="index.php?m=User&a=user_edit">修改个人信息</a></li><li><a href="index.php?m=User&a=user_pass">修改密码</a></li><li><a href="index.php?m=Index&a=weixin_add">发布二维码</a></li></ul></div><div class="my_off"><a href="index.php?m=User&a=login_out"><img src="../mobile_file/img/off.gif">退出</a></div><div class="clr"></div></div><div class="my_nav"><ul><li class="<?php if($_GET['id'] == 44) echo 'cur';?>"><a href="index.php?m=User&a=user_weixinqun&id=44">已发布的微信群</a></li><li class="<?php if($_GET['id'] == 48) echo 'cur';?>"><a href="index.php?m=User&a=user_weixinqun&id=48">已发布的个人微信</a></li><li class="<?php if($_GET['id'] == 47) echo 'cur';?>"><a href="index.php?m=User&a=user_weixinqun&id=47">已发布的公众号</a></li><div class="clr"></div></ul></div><div class="my_cont"><div class="my_tab"><table class="my_tabb" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td width="15%">ID</td><td width="25%">标题</td><td width="20%">栏目</td><td width="25%">时间</td><td width="15%">操作</td></tr><?php if(is_array($today_qun)): $i = 0; $__LIST__ = $today_qun;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr><td><?php echo ($data['id']); ?></td><td><?php echo ($data['title']); ?></td><td><?php echo ($data['catid']); ?></td><td><?php echo ($data['create_time']); ?></td><td><a href="index.php?m=Index&a=weixin_add&id=<?php echo ($data['publish_type_id']); ?>&ctid=<?php echo ($data['id']); ?>">编辑</a><a href="index.php?m=Index&a=weixin_del&id=<?php echo ($data['id']); ?>">删除</a></td></tr><?php endforeach; endif; else: echo "" ;endif; ?></tbody><tbody></tbody></table></div></div></div><footer class="fixed-bottom foot"><div class="foot_return"><span><a class="home"
+	href="index.php">首页</a><a class="home"
+	href="index.php?m=User">个人中心</a><a
+	class="srh" href="index.php?m=User&a=login_out">退出</a></span></div><div class="foot_txt">
+	﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.weixinsaoyisao.com/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.weixinsaoyisao.com/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>微分享若发现您的权利被侵害，请联系443238357qq ，我们尽快处理Copyright © 2015-2016  <a href="http://www.weixinsaoyisao.com"> 微分享 版权所有.冀ICP备16011679号<script type="text/javascript">
+    /*20:3 创建于 2016/7/3*/
+    var cpro_id = "u2693051";
+</script><script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/cm.js"></script></a><body></body></html><script type="text/javascript">
+    /*自适应 创建于 2016/7/1*/
+    var cpro_id = "u2691634";
+</script><script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/mi.js"></script></div></footer><iframe style="display: none; width: 1px; height: 1px;" src="../mobile_file/img/mp-cdn.htm"></iframe><script>$(document).ready(function(){
+    $(".btimg").lazyload();
+})</script></body></html>
