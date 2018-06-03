@@ -182,7 +182,8 @@ $(function(){
                 <div class="bottomLeft" style="bottom: 0px; left: 0px; width: 65px; height: 25px; background-image: url(Uploads<?php echo ($vo['logo2']?$vo['logo2']:$vo['logo']); ?>);"></div>
                 <div class="bottomRight" style="bottom: 0px; left: 65px; width: 65px; height: 25px; background-image: url(Uploads<?php echo ($vo['logo2']?$vo['logo2']:$vo['logo']); ?>);"></div>
               </div>
-          <p style="float:left;text-align:left"><i></i><a href="<?php echo U('Weixin/show',array('id'=>$vo['id']));?>" class=""  style="width:80px;overflow:hidden;float:left;margin-left:40px;height:22px" title="<?php echo ($vo["title"]); ?>"  title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,6)); ?></a></p></li><?php endforeach; endif; else: echo "" ;endif; ?>
+          <p style="float:left;text-align:left"><i></i><a href="<?php echo U('Weixin/show',array('id'=>$vo['id']));?>" class=""  style="width:80px;overflow:hidden;float:left;margin-left:40px;height:22px" title="<?php echo ($vo["title"]); ?>"  title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,6)); ?></a></p>
+              </li><?php endforeach; endif; else: echo "" ;endif; ?>
 
          
             </ul>
@@ -336,27 +337,59 @@ $('.settime > .icon').each(function() {
 <!-- 微信货源 END -->
 
 <!-- 微信营销 sTART -->
-<
+
         <div class="market mt20 clear">
-	<div class="wrap w1000">
-    	<div class="market-content fLeft">
+	<div class="wrap w1000 clear">
+    	<div class="market-content clear">
         	<div class="market-col1 border fLeft mr20">
-            	<div class="titleBg"><span class="title fLeft"><a href="<?php echo U('Article/index',array('id'=>142));?>" target="_blank">微信营销</a></span><span class="fRight more"><a href="<?php echo U('Article/index',array('id'=>142));?>">更多</a></span></div>
-                <div class="photo">
-                    
-                </div>
+            	<div class="titleBg">
+                    <span class="title fLeft"><a href="<?php echo U('Article/index',array('id'=>142));?>" target="_blank">微信营销</a></span>
+                    <span class="fRight more"><a href="<?php echo U('Article/index',array('id'=>142));?>">更多</a></span></div>
+                <!--<div class="photo">-->
+                    <!---->
+                <!--</div>-->
                 <ul>
-                    <?php if(is_array($weixinyingxiao)): $i = 0; $__LIST__ = $weixinyingxiao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><i class="square"></i><a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,20)); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($weixinyingxiao)): $i = 0; $__LIST__ = $weixinyingxiao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                            <div class="new-box clearfix">
+                                <div class="img-box">
+                                    <img src="Uploads<?php echo ($vo['logo2']?$vo['logo2']:$vo['logo']); ?>" width="100" height="100">
+                                </div>
+                                <div class="new-t1">
+                                    <i class="square"></i>
+                                    <a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,20)); ?></a>
+                                </div>
+                                <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                                <div class="new-t3">
+                                    <div class="new-time">发布时间：2018-06-06<p class="new-see">2525</p></div>
+                                    <span class="new-share">分享</span>
+                                </div>
+                            </div>
+
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
             
             <div class="market-col1 border fLeft mr20">
             	<div class="titleBg"><span class="title fLeft"><a href="<?php echo U('Article/index',array('id'=>55));?>" target="_blank">微信资讯</a></span><span class="fRight more"><a href="<?php echo U('Article/index',array('id'=>55));?>">更多</a></span></div>
-                <div class="photo">
-                    
-                </div>
+                <!--<div class="photo">-->
+                    <!---->
+                <!--</div>-->
                 <ul>
-					 <?php if(is_array($weixinzixun)): $i = 0; $__LIST__ = $weixinzixun;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><i class="square"></i><a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,20)); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+					 <?php if(is_array($weixinzixun)): $i = 0; $__LIST__ = $weixinzixun;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                        <div class="new-box clearfix">
+                            <div class="img-box">
+                                <img src="Uploads<?php echo ($vo['logo2']?$vo['logo2']:$vo['logo']); ?>" width="100" height="100">
+                            </div>
+                            <div class="new-t1">
+                                <i class="square"></i><a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,20)); ?></a>
+                            </div>
+                            <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                            <div class="new-t3">
+                                <div class="new-time">发布时间：2018-06-06<p class="new-see">2525</p></div>
+                                <span class="new-share">分享</span>
+                            </div>
+                        </div>
+                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
 					
                 </ul>
             </div>
@@ -365,7 +398,21 @@ $('.settime > .icon').each(function() {
             <div class="market-col2 border fRight">
             	<div class="titleBg"><span class="title fLeft"><a href="<?php echo U('Article/index',array('id'=>150));?>" target="_blank">搞笑视频</a></span><span class="fRight more"><a href="<?php echo U('Article/index',array('id'=>150));?>">更多</a></span></div>
                 <div class="photo">
-                    <?php if(is_array($weixinxuetang)): $i = 0; $__LIST__ = $weixinxuetang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><p><i class="square"></i><a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,15)); ?></a></p><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($weixinxuetang)): $i = 0; $__LIST__ = $weixinxuetang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="box-line">
+                            <div class="new-box clearfix">
+                                <div class="img-box">
+                                    <img src="Uploads<?php echo ($vo['logo2']?$vo['logo2']:$vo['logo']); ?>" width="100" height="100">
+                                </div>
+                                <div class="new-t1">
+                                    <p><i class="square"></i><a href="<?php echo U('Article/show',array('id'=>$vo['id']));?>" title="<?php echo ($vo["title"]); ?>"><?php echo (msubstr($vo["title"],0,15)); ?></a></p>
+                                </div>
+                                <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                                <div class="new-t3">
+                                    <div class="new-time">2018-06-06<p class="new-see">2525</p></div>
+                                    <span class="new-share">分享</span>
+                                </div>
+                            </div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
   

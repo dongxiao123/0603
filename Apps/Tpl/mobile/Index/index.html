@@ -67,7 +67,8 @@ $(function(){
                 <div class="bottomLeft" style="bottom: 0px; left: 0px; width: 65px; height: 25px; background-image: url(Uploads{$vo['logo2']?$vo['logo2']:$vo['logo']});"></div>
                 <div class="bottomRight" style="bottom: 0px; left: 65px; width: 65px; height: 25px; background-image: url(Uploads{$vo['logo2']?$vo['logo2']:$vo['logo']});"></div>
               </div>
-          <p style="float:left;text-align:left"><i></i><a href="{:U('Weixin/show',array('id'=>$vo['id']))}" class=""  style="width:80px;overflow:hidden;float:left;margin-left:40px;height:22px" title="{$vo.title}"  title="{$vo.title}">{$vo.title|msubstr=0,6}</a></p></li>
+          <p style="float:left;text-align:left"><i></i><a href="{:U('Weixin/show',array('id'=>$vo['id']))}" class=""  style="width:80px;overflow:hidden;float:left;margin-left:40px;height:22px" title="{$vo.title}"  title="{$vo.title}">{$vo.title|msubstr=0,6}</a></p>
+              </li>
           </volist>
 
          
@@ -230,30 +231,62 @@ $('.settime > .icon').each(function() {
 <!-- 微信货源 END -->
 
 <!-- 微信营销 sTART -->
-<
+
         <div class="market mt20 clear">
-	<div class="wrap w1000">
-    	<div class="market-content fLeft">
+	<div class="wrap w1000 clear">
+    	<div class="market-content clear">
         	<div class="market-col1 border fLeft mr20">
-            	<div class="titleBg"><span class="title fLeft"><a href="{:U('Article/index',array('id'=>142))}" target="_blank">微信营销</a></span><span class="fRight more"><a href="{:U('Article/index',array('id'=>142))}">更多</a></span></div>
-                <div class="photo">
-                    
-                </div>
+            	<div class="titleBg">
+                    <span class="title fLeft"><a href="{:U('Article/index',array('id'=>142))}" target="_blank">微信营销</a></span>
+                    <span class="fRight more"><a href="{:U('Article/index',array('id'=>142))}">更多</a></span></div>
+                <!--<div class="photo">-->
+                    <!---->
+                <!--</div>-->
                 <ul>
                     <volist name="weixinyingxiao" id="vo">
-					<li><i class="square"></i><a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,20}</a></li>
+					    <li>
+                            <div class="new-box clearfix">
+                                <div class="img-box">
+                                    <img src="Uploads{$vo['logo2']?$vo['logo2']:$vo['logo']}" width="100" height="100">
+                                </div>
+                                <div class="new-t1">
+                                    <i class="square"></i>
+                                    <a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,20}</a>
+                                </div>
+                                <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                                <div class="new-t3">
+                                    <div class="new-time">发布时间：2018-06-06<p class="new-see">2525</p></div>
+                                    <span class="new-share">分享</span>
+                                </div>
+                            </div>
+
+                        </li>
 					</volist>
                 </ul>
             </div>
             
             <div class="market-col1 border fLeft mr20">
             	<div class="titleBg"><span class="title fLeft"><a href="{:U('Article/index',array('id'=>55))}" target="_blank">微信资讯</a></span><span class="fRight more"><a href="{:U('Article/index',array('id'=>55))}">更多</a></span></div>
-                <div class="photo">
-                    
-                </div>
+                <!--<div class="photo">-->
+                    <!---->
+                <!--</div>-->
                 <ul>
 					 <volist name="weixinzixun" id="vo">
-					<li><i class="square"></i><a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,20}</a></li>
+					<li>
+                        <div class="new-box clearfix">
+                            <div class="img-box">
+                                <img src="Uploads{$vo['logo2']?$vo['logo2']:$vo['logo']}" width="100" height="100">
+                            </div>
+                            <div class="new-t1">
+                                <i class="square"></i><a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,20}</a>
+                            </div>
+                            <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                            <div class="new-t3">
+                                <div class="new-time">发布时间：2018-06-06<p class="new-see">2525</p></div>
+                                <span class="new-share">分享</span>
+                            </div>
+                        </div>
+                    </li>
 					</volist>
 					
                 </ul>
@@ -264,7 +297,21 @@ $('.settime > .icon').each(function() {
             	<div class="titleBg"><span class="title fLeft"><a href="{:U('Article/index',array('id'=>150))}" target="_blank">搞笑视频</a></span><span class="fRight more"><a href="{:U('Article/index',array('id'=>150))}">更多</a></span></div>
                 <div class="photo">
                     <volist name="weixinxuetang" id="vo">
-					<p><i class="square"></i><a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,15}</a></p>
+                        <div class="box-line">
+                            <div class="new-box clearfix">
+                                <div class="img-box">
+                                    <img src="Uploads{$vo['logo2']?$vo['logo2']:$vo['logo']}" width="100" height="100">
+                                </div>
+                                <div class="new-t1">
+                                    <p><i class="square"></i><a href="{:U('Article/show',array('id'=>$vo['id']))}" title="{$vo.title}">{$vo.title|msubstr=0,15}</a></p>
+                                </div>
+                                <div class="new-t2">近日，37岁的香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇香港女星阿娇</div>
+                                <div class="new-t3">
+                                    <div class="new-time">2018-06-06<p class="new-see">2525</p></div>
+                                    <span class="new-share">分享</span>
+                                </div>
+                            </div>
+                        </div>
 					</volist>
                 </div>
             </div>
