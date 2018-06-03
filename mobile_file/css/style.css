@@ -12,10 +12,13 @@ a:hover{ text-decoration:none; color:#f00;}
 .clr{ clear:both;}
 .hide-me{display:none;}
 .fixed-top { position: fixed; left: 0; right: 0; top: 0; z-index: 960;}
-.head{ background:#ebebeb; height:44px; border-bottom:2px solid #00d400;}
+.head{ background:#323432; height:44px; border-bottom:2px solid #00d400;}
 .headlf{ margin:5px 0 0 10px; font-size:1.5em; line-height:34px; }
 .headrg a{ display:inline-block;}
 .headrg img{ margin:10px 10px 0 0;}
+.logo-m{
+	height: 34px;width: auto
+}
 .fixed{position: absolute;top: 0;left: 0;width: 100%;}
 .more-fn {position: absolute; top: 44px; width: 100%; padding: 10px; background: #fff; border-bottom:1px solid #00d400;}
 .menu-fn {position: absolute; top: 44px; width: 100%; border-bottom:1px solid #00d400;}
