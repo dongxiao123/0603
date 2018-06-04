@@ -25,7 +25,7 @@
 .brand { height:440px; }
 .brand-content { width:1000px;height:100%;background:#fff; }
 .brand-content ul  {position:relative;float:left;padding:20px 0; }
-.brand-content li { float:left;display:inline-block;width:150px;height:180px;margin-left:10px; }
+.brand-content li { float:left;display:inline-block;width:130px;height:180px;margin-left:10px; }
 .brand-content li p { position:relative;float:left;width:100%;text-align:center; }
 .brand-view {}
 .brand-view:hover { width:150px;height:150px;background:#019f22;filter:alpha(opacity=93);-moz-opacity:0.93;opacity:0.93; }
